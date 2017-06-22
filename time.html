@@ -1,0 +1,42 @@
+<!-- HTML5基本文档结构 //-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>CSS3自动旋转效果</title>
+       
+  </head>
+  <body>
+      <script>
+
+</script>
+  
+    <script>
+    function dataTimes(dd) {
+            var da = dd;
+            da = new Date(da);
+            var month = da.getMonth()+1+'月';
+            var date = da.getDate()+'日 ';
+            var hours=da.getHours()+":";
+            var minutes=da.getMinutes()+":";
+            var second=da.getSeconds()
+            var datastring=[month,date,hours,minutes,second].join('')
+            //console.log([month,date,hours,minutes].join(''));
+            return datastring
+        }
+        var da=new Date().getTime();
+        console.log(da)
+      
+       console.log( dataTimes(da))
+
+       var on=true;
+       if(on){
+       	 setInterval(function(){
+       	var da=new Date().getTime();       	
+        	 console.log( dataTimes(da))
+        },1000)
+       	 on=!on;
+       }
+    </script>
+  </body>
+</html>
